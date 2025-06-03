@@ -50,7 +50,7 @@
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 4px;
-    background: #f9f9f9;
+    background: #160707; /*cambio del fondo para q se vea perron*/
 }
 
 .suggestion-item h4 {
@@ -130,3 +130,6 @@
     background: #b794f4 !important;
     cursor: not-allowed !important;
 }
+
+
+
