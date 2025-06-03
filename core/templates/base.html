@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> StudyFly </title>
+  {% csrf_token %}
+  <meta name="csrf-token" content="{{ csrf_token }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
   <link rel="stylesheet" href="{% static 'css/message.css' %}"/>
   <link rel="stylesheet" href="{% static 'css/horarios.css' %}"/>
   <link rel="stylesheet" href="{% static 'css/components/sidebar.css' %}"/>
+  {% block extra_css %}{% endblock %}
 </head>
 <body class="dark-theme">
 
@@ -29,5 +32,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
   <script src="{% static 'js/auth.js' %}"></script>
+  {% block extra_js %}{% endblock %}
 </body>
-</html> 
+</html>

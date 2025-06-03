@@ -44,7 +44,7 @@ class EventForm(forms.ModelForm):
         event_type = cleaned_data.get('event_type')
         if event_type == 'tarea' and not due_date:
             # Puedes hacer que due_date sea obligatorio para tareas si lo deseas
-            # self.add_error('due_date', "Las tareas deben tener una fecha de vencimiento.")
+            self.add_error('due_date', "Las tareas deben tener una fecha de vencimiento.")
             pass # Por ahora, lo dejamos opcional
 
         return cleaned_data
